@@ -1,0 +1,3 @@
+[submodule "plugin/flipcountdown"]
+	path = plugin/flipcountdown
+	url = https://github.com/xdan/flipcountdown.git
