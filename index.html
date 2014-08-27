@@ -17,13 +17,16 @@
 <script>
     $(function(){
       var i = 1;
+      $('#mp3').hide();
       var audio = $('#mp3')[0];
     audio.addEventListener('ended', function(){
+      $('#mp3').hide();
       i = 1;
     }, false);
       $('#retroclockbox_counter').flipcountdown({
         tick:function(){
             if(i == 1800){
+                $('#mp3').show();
                 audio.play();
             }
           return i++;
