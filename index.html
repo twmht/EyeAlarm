@@ -2,37 +2,20 @@
 <html>
     <head>
         <LINK REL="SHORTCUT ICON" HREF="http://twmht.github.io/EyeAlarm/favicon.ico"> 
-        <script type="text/javascript" src="plugin/flipcountdown/jquery.min.js"></script>
-        <script type="text/javascript" src="plugin/flipcountdown/jquery.flipcountdown.js"></script>
+        <script type = "text/javascript" src="plugin/flipcountdown/jquery.min.js"></script>
+        <script type = "text/javascript" src="plugin/flipcountdown/jquery.flipcountdown.js"></script>
         <link rel="stylesheet" type="text/css" href="plugin/flipcountdown/jquery.flipcountdown.css" />
         <link rel="stylesheet" type="text/css" href="css/stylesheets/style.css" />
     </head>
 
 <body  bgcolor = "black">
-<div class = "block">
+<div class = "clock">
+    <button id = "stopORstart"> Pause Me</button>
+    <button id = "reset">Reset Me</button>
     <div id="retroclockbox_counter"></div>
-    <audio src="music.mp3" id="mp3" controls></audio>
+    <audio src="music/music.mp3" controls></audio>
 </div>
 
-<script>
-    $(function(){
-      var i = 1;
-      $('#mp3').hide();
-      var audio = $('#mp3')[0];
-    audio.addEventListener('ended', function(){
-      $('#mp3').hide();
-      i = 1;
-    }, false);
-      $('#retroclockbox_counter').flipcountdown({
-        tick:function(){
-            if(i == 1800){
-                $('#mp3').show();
-                audio.play();
-            }
-          return i++;
-        }
-      });
-    })
-</script>
+<script src="js/script.js"> </script>
 </body>
 </html>
