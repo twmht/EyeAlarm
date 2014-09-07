@@ -22,7 +22,7 @@
 
     $('audio').hide();
     audio.addEventListener('ended', function(){
-        audio.hide();
+        $('audio').hide();
         counter = 1;
     }, false);
     $('#retroclockbox_counter').flipcountdown({
